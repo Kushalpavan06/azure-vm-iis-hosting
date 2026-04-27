@@ -1,0 +1,23 @@
+Azure VM IIS Hosting - Steps
+
+1. Created Virtual Machine
+   - Name: vm-kushal-web
+   - OS: Windows Server 2022
+   - Size: B2ats_v2
+   - Ports: RDP (3389), HTTP (80)
+
+2. Connected to VM using RDP
+
+3. Installed IIS using PowerShell:
+   Install-WindowsFeature -name Web-Server -IncludeManagementTools
+
+4. Verified IIS installation:
+   Opened http://localhost in browser
+
+5. Navigated to folder:
+   C:\inetpub\wwwroot
+
+6. Replaced default file with index.html
+
+7. Accessed website using:
+   http://<public-ip>
